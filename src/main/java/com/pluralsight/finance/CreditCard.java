@@ -18,11 +18,13 @@ public class CreditCard implements Valuable {
     }
 
     public void pay(double amount){
+        System.out.println("Credit successful");
         balance -= amount;
     }
 
     @Override
     public double getValue(){
+        System.out.println("Credit card");
         return balance;
     }
 }

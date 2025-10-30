@@ -29,6 +29,7 @@ public class BankAccount implements Valuable {
 
     @Override
     public double getValue(){
+        System.out.println("Bank Account");
         return balance;
     }
 }
