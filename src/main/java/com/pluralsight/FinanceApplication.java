@@ -1,9 +1,7 @@
 package com.pluralsight;
 
 import com.pluralsight.Interfaces.Valuable;
-import com.pluralsight.finance.BankAccount;
-import com.pluralsight.finance.CreditCard;
-import com.pluralsight.finance.Jewelry;
+import com.pluralsight.finance.*;
 
 public class FinanceApplication {
     public static void main(String[] args) {
@@ -18,5 +16,10 @@ public class FinanceApplication {
         account2.getValue();
         account1.getValue();
         account3.getValue();
+        Portfolio portfolio = new Portfolio("Roger", "Will");
+        portfolio.addValuable(new CreditCard("Gary", "1500", 1243));
+        portfolio.addValuable(new BankAccount("Gary", "1500", 1243));
+        portfolio.addValuable(new Gold(24.32));
+        System.out.println("Your total: " + portfolio.getValue());
     }
 }
